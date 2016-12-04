@@ -42,12 +42,12 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="..\source\;..\source\compat\msvc;.;..\source\common\;..\source\encoder\"
-				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;HAVE_CONFIG_H;X265_ARCH_X86=1;_CRT_SECURE_NO_WARNINGS;HIGH_BIT_DEPTH=0;X265_DEPTH=8;EXPORT_C_API=1;X265_NS=x265;_WIN32_WINNT=_WIN32_WINNT_WIN7"
+				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;HAVE_CONFIG_H;X265_ARCH_X86=1;_CRT_SECURE_NO_WARNINGS;HIGH_BIT_DEPTH=0;X265_DEPTH=8;EXPORT_C_API=1;X265_NS=x265"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				UsePrecompiledHeader="0"
-				ObjectFile="$(IntDir)\"
+				ObjectFile="$(IntDir)\$(ParentName)\$(InputName).obj"
 				WarningLevel="3"
 				DebugInformationFormat="4"
 				CompileAs="2"
@@ -597,6 +597,14 @@
 			<File
 				RelativePath="..\source\output\raw.cpp"
 				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						ObjectFile="$(IntDir)"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="..\source\output\raw.h"

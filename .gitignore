@@ -36,9 +36,11 @@
 *.su
 
 # Microsoft visual studio project files
-*.suo
+*.suo*
 *.ncb
 *.user
+*.sdf
+*.opensdf
 Debug/
 Release/
 x64/
